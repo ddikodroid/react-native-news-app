@@ -2,16 +2,16 @@ import React from 'react'
 import { StyleSheet, Text, SafeAreaView } from 'react-native'
 import { CustomHeader } from '../components'
 
-const HomeScreen = () => {
+const CategoryScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <CustomHeader title='Headline News' />
-      <Text>HomeScreen</Text>
+      <CustomHeader title='News by Category' />
+      <Text>Category Screen</Text>
     </SafeAreaView>
   )
 }
 
-export default HomeScreen
+export default CategoryScreen
 
 const styles = StyleSheet.create({
   container: {
