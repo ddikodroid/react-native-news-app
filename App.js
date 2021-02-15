@@ -1,10 +1,10 @@
 
 import React from 'react'
-import { HomeScreen } from './src/screens'
+import MainTabNavigator from './src/navigations/MainTabNavigator'
 
 const App = () => {
   return (
-    <HomeScreen />
+    <MainTabNavigator />
   )
 }
 export default App
