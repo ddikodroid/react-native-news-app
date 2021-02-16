@@ -4,9 +4,12 @@ import { COLOR } from '../styles/Color'
 import { FONT, HEIGHT, WIDTH } from '../styles/Dimensions'
 
 const BubbleCard = ({ text, onPress }) => {
+  const onClick = () => {
+    onPress(text)
+  }
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={onPress}>
+      <TouchableOpacity onPress={onClick}>
         <Text style={styles.font}>{text}</Text>
       </TouchableOpacity>
     </View>
