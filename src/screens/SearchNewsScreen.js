@@ -1,12 +1,13 @@
 import React from 'react'
-import { StyleSheet, Text, SafeAreaView } from 'react-native'
-import { CustomHeader } from '../components'
+import { StyleSheet, Text, SafeAreaView, View } from 'react-native'
+import { InputField, CustomHeader, IconButton } from '../components'
+import { WIDTH } from '../styles/Dimensions'
 
 const SearchNewsScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       <CustomHeader title='News by Keyword' />
-      <Text>Search News</Text>
+      <InputField placeholder='Search News' buttonType='search' label='Label' />
     </SafeAreaView>
   )
 }

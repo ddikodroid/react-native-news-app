@@ -1,12 +1,17 @@
 import React from 'react'
-import { StyleSheet, Text, SafeAreaView } from 'react-native'
-import { CustomHeader } from '../components'
+import { StyleSheet, SafeAreaView, View } from 'react-native'
+import { BubbleCard, CustomHeader } from '../components'
+import { HEIGHT } from '../styles/Dimensions'
 
 const CategoryScreen = () => {
+  const newsCategories = ['Finance', 'Sport', 'Otomotive', 'Technology', 'Travel', 'Health', 'Movies', 'Music', 'Adventure', 'Animal']
   return (
     <SafeAreaView style={styles.container}>
       <CustomHeader title='News by Category' />
-      <Text>Category Screen</Text>
+      <View style={styles.categoryContainer}>
+        {newsCategories.map((c) => <BubbleCard key={c} text={c} />)}
+      </View>
+
     </SafeAreaView>
   )
 }
@@ -17,5 +22,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center'
+  },
+  categoryContainer: {
+    width: '95%',
+    flexWrap: 'wrap',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginVertical: HEIGHT * 0.01
   }
 })
