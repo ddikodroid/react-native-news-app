@@ -1,13 +1,13 @@
 import { all } from 'redux-saga/effects'
-import categoryNewsWatcher from './CategoryNewsSaga'
-import headlineNewsWatcher from './HeadlineNewsSaga'
-import searchNewsWatcher from './SearchNewsSaga'
+import categoryWatcher from './CategorySaga'
+import headlineWatcher from './HeadlineSaga'
+import searchWatcher from './SearchSaga'
 
 function * rootSaga () {
   yield all([
-    headlineNewsWatcher(),
-    searchNewsWatcher(),
-    categoryNewsWatcher()
+    headlineWatcher(),
+    searchWatcher(),
+    categoryWatcher()
   ])
 }
 

@@ -2,7 +2,7 @@ import axios from 'axios'
 import { BASE_URL } from './api'
 import { Config } from 'react-native-config'
 
-export const searchNewsApi = (category) => {
+export const searchNewsApi = (keyword) => {
   return axios
-    .get(`${BASE_URL}/everything?q=&apiKey=${Config.API_KEY}`)
+    .get(`${BASE_URL}/everything?q=${keyword}&apiKey=${Config.NEWS_API}`)
 }

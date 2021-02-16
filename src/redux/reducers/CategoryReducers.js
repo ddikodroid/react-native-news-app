@@ -1,4 +1,4 @@
-import { categoryNewsTypes } from '../actions/CategoryNewsTypes'
+import { CategoryTypes } from '../actions/CategoryTypes'
 
 const initialState = {
   isLoading: false,
@@ -6,22 +6,22 @@ const initialState = {
   data: []
 }
 
-const categoryNewsReducer = (state = initialState, action) => {
+const CategoryReducers = (state = initialState, action) => {
   switch (action.type) {
-    case categoryNewsTypes.CATEGORY_NEWS_REQUEST: {
+    case CategoryTypes.CATEGORY_REQUEST: {
       return {
         ...state,
         isLoading: true
       }
     }
-    case categoryNewsTypes.CATEGORY_NEWS_SUCCESS: {
+    case CategoryTypes.CATEGORY_SUCCESS: {
       return {
         ...state,
         isLoading: false,
         data: action.payload
       }
     }
-    case categoryNewsTypes.CATEGORY_NEWS_FAILED: {
+    case CategoryTypes.CATEGORY_FAILED: {
       return {
         ...state,
         isLoading: false,
@@ -35,4 +35,4 @@ const categoryNewsReducer = (state = initialState, action) => {
   }
 }
 
-export default categoryNewsReducer
+export default CategoryReducers

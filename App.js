@@ -1,12 +1,12 @@
 
 import React from 'react'
 import { Provider } from 'react-redux'
-import configureStore from './src/redux/store'
+import globalStore from './src/redux/store'
 import MainTabNavigator from './src/navigations/MainTabNavigator'
 
 const App = () => {
   return (
-    <Provider store={configureStore}>
+    <Provider store={globalStore}>
       <MainTabNavigator />
     </Provider>
   )

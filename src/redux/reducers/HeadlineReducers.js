@@ -1,4 +1,4 @@
-import { searchNewsTypes } from '../actions/SearchNewsTypes'
+import HeadlineTypes from '../actions/HeadlineTypes'
 
 const initialState = {
   isLoading: false,
@@ -6,22 +6,22 @@ const initialState = {
   data: []
 }
 
-const searchNewsReducer = (state = initialState, action) => {
+const HeadlineReducers = (state = initialState, action) => {
   switch (action.type) {
-    case searchNewsTypes.SEARCH_NEWS_REQUEST: {
+    case HeadlineTypes.HEADLINE_REQUEST: {
       return {
         ...state,
         isLoading: true
       }
     }
-    case searchNewsTypes.SEARCH_NEWS_SUCCESS: {
+    case HeadlineTypes.HEADLINE_SUCCESS: {
       return {
         ...state,
         isLoading: false,
         data: action.payload
       }
     }
-    case searchNewsTypes.SEARCH_NEWS_FAILED: {
+    case HeadlineTypes.HEADLINE_FAILED: {
       return {
         ...state,
         isLoading: false,
@@ -35,4 +35,4 @@ const searchNewsReducer = (state = initialState, action) => {
   }
 }
 
-export default searchNewsReducer
+export default HeadlineReducers

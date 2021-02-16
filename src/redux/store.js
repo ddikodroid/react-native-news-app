@@ -1,20 +1,12 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux'
-import categoryNewsReducer from './reducers/CategoryNewsReducer'
-import headlineNewsReducer from './reducers/HeadlineNewsReducer'
-import searchNewsReducer from './reducers/SearchNewsReducer'
+import { applyMiddleware, createStore } from 'redux'
 import createSagaMiddleware from 'redux-saga'
-import rootSaga from './sagas/RootSaga'
+import rootReducers from './reducers/rootReducers'
+import rootSaga from './sagas/rootSaga'
 
 const sagaMiddleware = createSagaMiddleware()
 
-const rootReducer = combineReducers({
-  categoryNews: categoryNewsReducer,
-  headlineNews: headlineNewsReducer,
-  searchNews: searchNewsReducer
-})
-
-const configureStore = createStore(rootReducer, applyMiddleware(sagaMiddleware))
+const globalStore = createStore(rootReducers, applyMiddleware(sagaMiddleware))
 
 sagaMiddleware.run(rootSaga)
 
-export default configureStore
+export default globalStore

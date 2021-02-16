@@ -1,0 +1,7 @@
+const CategoryTypes = {
+  CATEGORY_REQUEST: 'CATEGORY_REQUEST',
+  CATEGORY_SUCCESS: 'CATEGORY_SUCCESS',
+  CATEGORY_FAILED: 'CATEGORY_FAILED'
+}
+
+export default CategoryTypes

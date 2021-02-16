@@ -3,17 +3,17 @@ import { StyleSheet, Text, TouchableOpacity, Image, Linking, Alert } from 'react
 import { COLOR } from '../styles/Color'
 import { FONT, HEIGHT, WIDTH } from '../styles/Dimensions'
 
-const NewsCard = ({ article }) => {
+const NewsCard = ({ title, url, author, urlToImage, description }) => {
   const handleOnPress = () => {
-    Linking.openURL(`${article.url}`)
+    Linking.openURL(`${url}`)
       .catch((error) => Alert.alert(error))
   }
   return (
     <TouchableOpacity style={styles.card} onPress={handleOnPress}>
-      <Text style={styles.title}>{article.title}</Text>
-      <Text style={styles.author}>{article.author}</Text>
-      <Image style={styles.image} source={{ uri: article.urlToImage }} />
-      <Text style={styles.description}>{article.description}</Text>
+      <Text style={styles.title}>{title}</Text>
+      <Text style={styles.author}>{author}</Text>
+      <Image style={styles.image} source={{ uri: urlToImage }} />
+      <Text style={styles.description}>{description}</Text>
     </TouchableOpacity>
   )
 }
