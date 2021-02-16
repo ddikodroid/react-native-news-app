@@ -42,7 +42,8 @@ const styles = StyleSheet.create({
   },
   image: {
     height: HEIGHT * 0.2,
-    resizeMode: 'cover'
+    resizeMode: 'cover',
+    borderRadius: WIDTH * 0.02
   },
   author: {
     ...FONT.body4,
