@@ -8,7 +8,7 @@ const InputField = (props) => {
   const {
     value, onChangeText,
     label, placeholder,
-    buttonType
+    buttonType, onPress
   } = props
   const [onFocus, setOnFocus] = useState(false)
 
@@ -39,6 +39,7 @@ const InputField = (props) => {
             color={onFocus
               ? COLOR.primary
               : COLOR.secondary}
+            onPress={onPress}
           />}
         </View>
 
