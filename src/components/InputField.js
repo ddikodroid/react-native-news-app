@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row-reverse',
     borderRadius: WIDTH * 0.025,
     borderColor: COLOR.secondary,
-    paddingHorizontal: WIDTH * 0.01
+    paddingHorizontal: WIDTH * 0.02
 
   },
   buttonContainer: {
