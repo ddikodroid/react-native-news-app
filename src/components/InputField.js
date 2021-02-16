@@ -20,7 +20,13 @@ const InputField = (props) => {
   }
   return (
     <View style={styles.fieldContainer}>
-      <View style={styles.inputContainer}>
+      <View style={{
+        ...styles.inputContainer,
+        borderColor: onFocus
+          ? COLOR.primary
+          : COLOR.secondary
+      }}
+      >
         <View style={{
           marginLeft: buttonType
             ? WIDTH * 0.01
@@ -30,7 +36,9 @@ const InputField = (props) => {
         >{buttonType &&
           <IconButton
             name={buttonType}
-            color={COLOR.primary}
+            color={onFocus
+              ? COLOR.primary
+              : COLOR.secondary}
           />}
         </View>
 
@@ -44,10 +52,7 @@ const InputField = (props) => {
           placeholderTextColor={COLOR.secondary}
           style={{
             ...FONT.placeholder,
-            ...styles.textInput,
-            borderColor: onFocus
-              ? COLOR.primary
-              : COLOR.secondary
+            ...styles.textInput
           }}
         />
       </View>
