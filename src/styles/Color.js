@@ -7,5 +7,8 @@ export const COLOR = {
   teal: '#26a69a',
   yellow: '#ffeb3b',
   transparent: '#00000000',
-  red: '#d32f2f'
+  red: '#d32f2f',
+  lightDark: 'rgb(42, 45, 53)',
+  notTooDark: 'rgb(40,43,50)',
+  moreDark: 'rgb(34,37,44)'
 }
