@@ -14,7 +14,7 @@ const MainTabNavigator = () => {
     <NavigationContainer>
       <MainTab.Navigator
         initialRouteName='Headline' tabBarOptions={{
-          title: 'Headline NEws',
+          title: 'Headline News',
           showLabel: false,
           style: {
             position: 'absolute',
@@ -27,7 +27,7 @@ const MainTabNavigator = () => {
         }}
       >
         <MainTab.Screen
-          name='Search News' component={SearchNewsScreen} options={{
+          name='Search' component={SearchNewsScreen} options={{
             tabBarLabel: 'Search News',
             tabBarIcon: ({ focused }) => (
               <Icon
