@@ -36,11 +36,12 @@ const styles = StyleSheet.create({
     ...FONT.h2
   },
   description: {
+    paddingTop: 5,
     color: COLOR.moreDark,
     ...FONT.body3
   },
   image: {
-    height: HEIGHT * 0.3,
+    height: HEIGHT * 0.2,
     resizeMode: 'cover'
   },
   author: {
