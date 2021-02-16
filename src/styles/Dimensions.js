@@ -26,17 +26,17 @@ export const SIZE = {
 
 export const FONT = {
   h0: {
-    fontWeight: '700',
+    fontWeight: '800',
     fontSize: SIZE.xxl,
     lineHeight: SIZE.xxl + 5
   },
   h1: {
-    fontWeight: '500',
+    fontWeight: '700',
     fontSize: SIZE.xl,
     lineHeight: SIZE.xl + 6
   },
   h2: {
-    fontWeight: '500',
+    fontWeight: '700',
     fontSize: SIZE.l,
     lineHeight: SIZE.l + 8
   },
