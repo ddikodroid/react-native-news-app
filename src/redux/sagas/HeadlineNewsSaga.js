@@ -1,6 +1,6 @@
 import { put, takeLatest } from 'redux-saga/effects'
 import headlineNewsApi from '../../apis/CategoryNewsApi'
-import headlineNewsTypes from '../actions'
+import { headlineNewsTypes } from '../actions/HeadlineNewsTypes'
 
 function * headlineNewsWatcher () {
   yield takeLatest(headlineNewsTypes.CATEGORY_NEWS_REQUEST, headlineNewsWorker)

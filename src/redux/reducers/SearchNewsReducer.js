@@ -1,4 +1,4 @@
-import searchNewsTypes from '../actions/SearchNewsTypes'
+import { searchNewsTypes } from '../actions/SearchNewsTypes'
 
 const initialState = {
   isLoading: false,
@@ -6,7 +6,7 @@ const initialState = {
   data: []
 }
 
-const SearchNewsReducer = (state = initialState, action) => {
+const searchNewsReducer = (state = initialState, action) => {
   switch (action.type) {
     case searchNewsTypes.SEARCH_NEWS_REQUEST: {
       return {
@@ -35,4 +35,4 @@ const SearchNewsReducer = (state = initialState, action) => {
   }
 }
 
-export default SearchNewsReducer
+export default searchNewsReducer

@@ -1,4 +1,4 @@
-import categoryNewsTypes from '../actions/categoryNewsTypes'
+import { categoryNewsTypes } from '../actions/CategoryNewsTypes'
 
 const initialState = {
   isLoading: false,
@@ -6,7 +6,7 @@ const initialState = {
   data: []
 }
 
-const CategoryNewsReducer = (state = initialState, action) => {
+const categoryNewsReducer = (state = initialState, action) => {
   switch (action.type) {
     case categoryNewsTypes.CATEGORY_NEWS_REQUEST: {
       return {
@@ -35,4 +35,4 @@ const CategoryNewsReducer = (state = initialState, action) => {
   }
 }
 
-export default CategoryNewsReducer
+export default categoryNewsReducer

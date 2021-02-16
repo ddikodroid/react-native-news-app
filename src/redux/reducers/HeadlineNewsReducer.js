@@ -1,4 +1,4 @@
-import headlineNewsTypes from '../actions/HeadlineNewsTypes'
+import { headlineNewsTypes } from '../actions/HeadlineNewsTypes'
 
 const initialState = {
   isLoading: false,
@@ -6,7 +6,7 @@ const initialState = {
   data: []
 }
 
-const HeadlineNewsReducer = (state = initialState, action) => {
+const headlineNewsReducer = (state = initialState, action) => {
   switch (action.type) {
     case headlineNewsTypes.HEADLINE_NEWS_REQUEST: {
       return {
@@ -35,4 +35,4 @@ const HeadlineNewsReducer = (state = initialState, action) => {
   }
 }
 
-export default HeadlineNewsReducer
+export default headlineNewsReducer
