@@ -24,8 +24,12 @@ const styles = StyleSheet.create({
   card: {
     margin: WIDTH * 0.02,
     borderRadius: WIDTH * 0.05,
-    backgroundColor: 'white',
-    padding: WIDTH * 0.04
+    backgroundColor: COLOR.white,
+    padding: WIDTH * 0.04,
+    shadowColor: COLOR.ligtDark,
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.5,
+    shadowRadius: 5
   },
   title: {
     color: COLOR.moreDark,
