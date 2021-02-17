@@ -15,7 +15,7 @@ export default CustomHeader
 
 const styles = StyleSheet.create({
   headerContainer: {
-    width: WIDTH,
+    width: '100%',
     height: HEIGHT * 0.06,
     flexDirection: 'row',
     alignItems: 'center',
