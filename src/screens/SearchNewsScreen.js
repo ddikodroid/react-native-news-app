@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { StyleSheet, SafeAreaView, Text, FlatList, ActivityIndicator } from 'react-native'
-import { InputField, CustomHeader, StatusBariOS, NewsCard, SmallNewsCard } from '../components'
+import { StyleSheet, SafeAreaView, FlatList, ActivityIndicator } from 'react-native'
+import { InputField, CustomHeader, StatusBariOS, SmallNewsCard } from '../components'
 import { useDispatch, useSelector } from 'react-redux'
 import SearchTypes from '../redux/actions/SearchTypes'
 import { COLOR } from '../styles/Color'

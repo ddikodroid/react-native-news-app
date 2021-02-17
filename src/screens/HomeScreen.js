@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { StyleSheet, Text, SafeAreaView, View, FlatList } from 'react-native'
 import { CustomHeader, NewsCard, StatusBariOS } from '../components'
 import { COLOR } from '../styles/Color'
