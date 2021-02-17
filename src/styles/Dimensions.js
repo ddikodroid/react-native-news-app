@@ -45,6 +45,16 @@ export const FONT = {
     fontSize: SIZE.m,
     lineHeight: SIZE.m + 6
   },
+  titleSmall: {
+    fontWeight: '700',
+    fontSize: SIZE.s + 1,
+    lineHeight: SIZE.s + 4
+  },
+  descriptionSmall: {
+    fontWeight: '300',
+    fontSize: SIZE.xs + 1,
+    lineHeight: SIZE.xs + 4
+  },
   h4: {
     fontWeight: '500',
     fontSize: SIZE.s,
