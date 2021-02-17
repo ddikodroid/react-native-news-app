@@ -55,6 +55,7 @@ const InputField = (props) => {
             ...FONT.placeholder,
             ...styles.textInput
           }}
+          {...props}
         />
       </View>
     </View>
