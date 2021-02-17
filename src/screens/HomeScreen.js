@@ -7,29 +7,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import HeadlineTypes from '../redux/actions/HeadlineTypes'
 
 const HomeScreen = () => {
-  const [hour, setHour] = useState()
-  const [greeting, setGreeting] = useState()
-
-  const date = new Date()
-  const time = date.getHours()
-
   useEffect(() => {
-    setHour(time)
-    setGreetingMessage()
     getHeadlineData()
   }, [])
-
-  const setGreetingMessage = () => {
-    if (hour > 0 && hour < 12) {
-      setGreeting('Good morning')
-    } else if (hour === 12) {
-      setGreeting('Good noon')
-    } else if (hour > 12 && hour < 18) {
-      setGreeting('Good afternoon')
-    } else {
-      setGreeting('Good night')
-    }
-  }
 
   const dispatch = useDispatch()
   const headlineData = useSelector(state => state.headline.data)
@@ -42,7 +22,7 @@ const HomeScreen = () => {
       <SafeAreaView style={styles.container}>
         <CustomHeader title='Headline News' />
         <View style={styles.greetingContainer}>
-          <Text style={[FONT.h2, styles.font]}>{greeting}, Diko!</Text>
+          <Text style={[FONT.h2, styles.font]}>Hi, Diko!</Text>
           <Text style={[FONT.body2, styles.font]}>These are the headline news today.</Text>
         </View>
         <FlatList
