@@ -1,4 +1,4 @@
-import { CategoryTypes } from '../actions/CategoryTypes'
+import CategoryTypes from '../actions/CategoryTypes'
 
 const initialState = {
   isLoading: false,
