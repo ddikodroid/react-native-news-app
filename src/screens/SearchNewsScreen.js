@@ -3,7 +3,6 @@ import { StyleSheet, SafeAreaView, Text, FlatList, ActivityIndicator } from 'rea
 import { InputField, CustomHeader, StatusBariOS, NewsCard } from '../components'
 import { useDispatch, useSelector } from 'react-redux'
 import SearchTypes from '../redux/actions/SearchTypes'
-import { FONT } from '../styles/Dimensions'
 import { COLOR } from '../styles/Color'
 const SearchNewsScreen = () => {
   const [keyword, setKeyword] = useState('')
@@ -13,7 +12,6 @@ const SearchNewsScreen = () => {
   const onPressSearch = () => {
     dispatch({ type: SearchTypes.SEARCH_REQUEST, payload: keyword })
   }
-  console.log(searchResult)
   return (
     <>
       <StatusBariOS />
