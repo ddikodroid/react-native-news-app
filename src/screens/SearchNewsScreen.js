@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { StyleSheet, SafeAreaView, Text, FlatList, ActivityIndicator } from 'react-native'
-import { InputField, CustomHeader, StatusBariOS, NewsCard } from '../components'
+import { InputField, CustomHeader, StatusBariOS, NewsCard, SmallNewsCard } from '../components'
 import { useDispatch, useSelector } from 'react-redux'
 import SearchTypes from '../redux/actions/SearchTypes'
 import { COLOR } from '../styles/Color'
@@ -31,11 +31,10 @@ const SearchNewsScreen = () => {
               keyExtractor={(news, index) => 'key' + index}
               renderItem={(news) => {
                 return (
-                  <NewsCard
+                  <SmallNewsCard
                     key={news.item.publishedAt}
                     title={news.item.title}
                     url={news.item.url}
-                    author={news.item.author}
                     urlToImage={news.item.urlToImage}
                     description={news.item.description}
                   />
