@@ -1,3 +1,6 @@
 export { default as HomeScreen } from './HomeScreen'
 export { default as CategoryScreen } from './CategoryScreen'
 export { default as SearchNewsScreen } from './SearchNewsScreen'
+export { default as HomeScreen2 } from './HomeScreen2'
+export { default as CategoryScreen2 } from './CategoryScreen2'
+export { default as SearchNewsScreen2 } from './SearchNewsScreen2'
